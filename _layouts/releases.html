@@ -1,0 +1,28 @@
+---
+layout: layout
+---
+
+<div class="container">
+	<div class="blog-post">
+		<h3>
+		  <strong><a href="{{ page.url }}">{{ page.title }}</a></strong>
+		</h3>
+	</div>
+	<div class="blog-title">
+		<h4>
+		{{ page.date | date: "%B %e, %Y" }}
+			&nbsp;&nbsp;
+			{% for tag in page.tags %}
+			 <span class="label label-success">{{ tag }}</span>
+			{% endfor %}
+		</h4>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="blogpost">
+			  {{ content }}
+			   <hr>
+			</div>
+		</div>
+	</div>
+</div>

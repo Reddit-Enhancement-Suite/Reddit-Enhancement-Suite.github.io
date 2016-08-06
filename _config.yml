@@ -1,0 +1,9 @@
+# Site Config
+url: https://reddit-enhancement-suite.github.io/
+baseurl: /
+title: Reddit Enhancement Suite
+author: RES Team
+description: Reddit Enhancement Suite (RES) is a suite of modules that enhances your Reddit browsing experience.
+logo: res.png
+transparent: transparent.png
+google_analytics:
