@@ -1,2 +1,2 @@
 # Reddit-Enhancement-Suite.github.io
-Reddit Enhancement Suite info and tools
+Reddit Enhancement Suite Website and Tools
