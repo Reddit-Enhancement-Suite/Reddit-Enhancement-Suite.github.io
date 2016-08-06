@@ -7,7 +7,8 @@ body {
   background-color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid #04789a;
+  border-top: 4px solid #04789a;
+  border-bottom: 4px solid #04789a;
 }
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -171,7 +172,7 @@ body {
 	color: #6b6b6b;
 }
 div.footer{
-  border-bottom: 5px solid #04789a;;
+ 
 }
 
 /* Browsers
