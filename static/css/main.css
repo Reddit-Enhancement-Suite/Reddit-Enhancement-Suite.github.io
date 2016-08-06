@@ -173,10 +173,6 @@ body {
 div.footer{
   border-bottom: 5px solid #04789a;;
 }
-/* Set the fixed height of the footer here */
-.footer {
-  height: 50px;
-}
 
 /* Browsers
 -------------------------------------------------- */
