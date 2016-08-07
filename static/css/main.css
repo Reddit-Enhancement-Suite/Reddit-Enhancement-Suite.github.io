@@ -8,6 +8,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
   border-top: 4px solid #04789a;
+  line-height: 1.22 !important;
 }
 /* Wrapper for page content to push down footer */
 #wrap {
