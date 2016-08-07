@@ -90,10 +90,23 @@ body {
 .twoCol span{ width: 50%; float: left; }
 .clear { clear: both; }
 
+.page {
+  width: auto;
+  max-width: 900px;
+}
+.page .text-muted {
+  margin: 20px 0;
+}
+.page a {
+  color: #04789a;
+}
+.page a:hover {
+  color: #267723;
+}
 .container {
   width: auto;
   max-width: 900px;
-
+  text-align: center;
 }
 .container .text-muted {
   margin: 20px 0;
