@@ -88,6 +88,7 @@ body {
 /* Custom page CSS
 -------------------------------------------------- */
 .twoCol span{ width: 50%; float: left; }
+.clear { clear: both; }
 .container {
   width: auto;
   max-width: 900px;
