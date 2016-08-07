@@ -90,14 +90,10 @@ body {
 .twoCol span{ width: 50%; float: left; }
 .clear { clear: both; }
 
-.pages {
-  width: auto;
-  max-width: 900px;
-}
 .container {
   width: auto;
   max-width: 900px;
-  text-align: center;
+
 }
 .container .text-muted {
   margin: 20px 0;
