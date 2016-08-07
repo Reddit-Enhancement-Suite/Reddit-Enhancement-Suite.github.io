@@ -107,6 +107,7 @@ body {
 .page a:hover {
   color: #267723;
 }
+.page h1 {  text-align: center; }
 .container {
   width: auto;
   max-width: 900px;
