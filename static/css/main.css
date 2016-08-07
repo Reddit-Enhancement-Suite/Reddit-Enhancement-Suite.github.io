@@ -89,8 +89,6 @@ body {
 -------------------------------------------------- */
 .twoCol span{ width: 50%; float: left; }
 .clear { clear: both; }
-section{min-height:349px;width:920px;margin:0 auto;}
-section.shadow{background:url(images/bg-shadow-bottom.jpg) top center no-repeat;}
 
 .container {
   width: auto;
