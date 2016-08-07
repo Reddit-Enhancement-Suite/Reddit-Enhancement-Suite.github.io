@@ -87,12 +87,16 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-.twoCol span{ width: 50%; float: left; }
+.twoCol span { width: 50%; float: left; }
 .clear { clear: both; }
 
 .page {
   width: auto;
   max-width: 900px;
+  padding-right 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .page .text-muted {
   margin: 20px 0;
