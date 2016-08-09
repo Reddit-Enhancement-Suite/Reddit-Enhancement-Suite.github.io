@@ -161,6 +161,14 @@ body {
 .browsers h4 > a {
   color: #000000;
 }
+.small-ctas {
+  font-size: smaller;
+  margin-top: 3em;
+  text-align: center;
+}
+.small-ctas a {
+  margin-right: 3em;
+}
 .avatar {
   padding-top: 5%;
 }
