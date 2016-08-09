@@ -205,6 +205,11 @@ body {
 
 /* Browsers
 -------------------------------------------------- */
+.browser-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #chrome {
 	background: url('../img/browsers.png') no-repeat 0 0;
 	width: 49px;
