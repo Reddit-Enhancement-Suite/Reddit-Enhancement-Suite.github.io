@@ -196,7 +196,7 @@ body {
 /* Footer
 -------------------------------------------------- */
 
-.footer {
+#footer {
   margin-top: 2em;
   text-decoration: none !important;
 }
