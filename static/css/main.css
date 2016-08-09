@@ -166,8 +166,11 @@ body {
   text-align: center;
 }
 .small-ctas a {
-  margin-right: 3em;
+  margin-left: 3em;
   margin-bottom: 1em;
+}
+.small-ctas a:first-child {
+  margin-left: 0;
 }
 .avatar {
   padding-top: 5%;
