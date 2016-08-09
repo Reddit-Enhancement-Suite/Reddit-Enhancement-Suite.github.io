@@ -87,7 +87,8 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-.twoCol span { width: 50%; float: left; }
+.twoCol span { width: 47.5%; float: left; }
+.twoCol span + span { margin-left: 5%; }
 .clear { clear: both; }
 
 .page {
