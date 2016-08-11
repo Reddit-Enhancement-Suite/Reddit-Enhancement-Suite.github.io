@@ -185,6 +185,10 @@ body {
   line-height: 30px;
   font-size: 18px;
 }
+.browsers {
+    margin-right: 5px;
+    float: left;
+}
 
 /* Footer
 -------------------------------------------------- */
