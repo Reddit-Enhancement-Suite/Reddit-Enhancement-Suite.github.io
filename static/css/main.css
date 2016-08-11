@@ -154,13 +154,7 @@ body {
   padding-top: -10px;
   text-align: left;
 }
-.browsers {
-  padding-top: 12px;
-  padding: 25px;
-}
-.browsers h4 > a {
-  color: #000000;
-}
+
 .small-ctas {
   margin-top: 3em;
   text-align: center;
