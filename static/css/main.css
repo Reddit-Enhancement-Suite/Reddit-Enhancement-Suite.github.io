@@ -204,6 +204,15 @@ body {
   word-spacing: 25px;
 }
 
+#markdown-toc {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-left: 1px #333 dotted;
+  border-bottom: 1px #333 dotted;
+}
+
 /* Footer
 -------------------------------------------------- */
 
