@@ -128,18 +128,32 @@ body {
  height: auto;
  max-width: 100%;
 }
-.panel-default h4 {
+.panel-default h1,
+.panel-default h2,
+.panel-default h3,
+.panel-default h4,
+.panel-default h5,
+.panel-default h6 {
   text-align: left;
-  line-height: 24px;
-  font-size: 22px;
+  line-height: 1.1em;
+}
+.panel-default h1 {
+  font-size: 35px;
+}
+.panel-default h2 {
+  font-size: 32px;
+}
+.panel-default h3 {
+  font-size: 30px;
+}
+.panel-default h4 {
+  font-size: 28px;
 }
 .panel-default h5 {
-  text-align: left;
-  line-height: 30px;
-  font-size: 18px;
+  font-size: 25px;
 }
 .panel-default h6 {
-  font-size: 15px;
+  font-size: 23px;
 }
 .panel-default h4 a, h5 a {
   color: #04789a;
