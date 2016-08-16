@@ -6,14 +6,9 @@ title: Known Issues
 <h1>Known Issues</h1>
 {% for post in site.posts %}{% if post.tags contains "Known Issues" %}
   <div class="blog-post">
-		<h3>
-		  <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
-		</h3>
-	</div>
 	<div class="blog-title">
-		<h4>
-		{{ post.date | date: "%B %e, %Y" }}
-		</h4>
+		<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		<h4>{{ post.date | date: "%B %e, %Y" }}</h4>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-body">
