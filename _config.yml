@@ -1,6 +1,7 @@
 # Site Config
 title: Reddit Enhancement Suite
 author: RES Team
-description: Reddit Enhancement Suite (RES) is a suite of modules that enhances your Reddit browsing experience.
+description: Reddit Enhancement Suite (RES) is community-driven unofficial browser extension for enhancing your reddit experience.
+short_description: community-driven unofficial browser extension for reddit
 google_analytics: UA-17650786-1
 permalink: pretty
