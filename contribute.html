@@ -57,13 +57,125 @@ title: Contribute
 	<span>
 		<div class="donateOption">
 			<p>Bitcoin (via BitPay)</p>
-			<form action="https://bitpay.com/checkout" method="post" >
-				<input type="hidden" name="action" value="checkout" />
-				<input type="hidden" name="posData" value="" />
-				<input type="hidden" name="data" value="ddFrz5v8dCQ/2oQV9a+OLm3nVrlinxOo1WYFsRjZR5IoouplTgMj7zg8OB3i5xSYiPTbyUmBiNjoY9z/iuEwqPvQClXqQdGINb+IVIzjuZobCUDsLUztc2qdQHvU/sLQzf3a339vzs9JAwSj6W/IpNt90WN1Bdab491xtPpeCIwcS84WY0T+QDjN0c5+1k8/rNqr6A6hFX4TWwZrxQiv35Bl/xyo+YLrE9OUM0K+2cu1hsc7/sOMNsqIB1v4W5CMkQFP40sq9CWf14nyvYbZtg==" />
-				<input type="image" src="https://bitpay.com/img/button8.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." ><br>
-				<input type="text" name="price" size="2" value="" /> bitcoins
-			</form>
+			 <style>
+  .bitpay-donate { margin:20px 0;}
+  .bitpay-donate fieldset {border:0;}
+  .bitpay-donate input {padding:4px 10px;}
+  .bitpay-donate select {padding:3px 10px;}
+  .bitpay-donate ul, .bitpay-donate li {padding:0;margin:0;list-style:none;}
+  .bitpay-donate li {padding:10px 0;}
+  .bitpay-donate-field {clear:both;}
+  .bitpay-donate-field label {float:left;width:100px;}
+  .bitpay-donate-field div {float:left;}
+  .bitpay-donate-field-email {width:80%;}
+  .bitpay-donate-field-price {width:40%;}
+  .bitpay-donate-field-currency {width:40%;}
+  .bitpay-donate-button-wrapper {clear:both;margin:auto;text-align:center;}
+  input.bitpay-donate-error {border:2px solid red;}
+  </style>
+  <form class="bitpay-donate" action="https://bitpay.com/checkout" method="post" onsubmit="return checkRequiredFields(this);">
+    <input name="action" type="hidden" value="checkout">
+    <fieldset>
+      <ul>
+
+        <li class="bitpay-donate-field">
+          <label>Email:</label>
+          <input class="bitpay-donate-field-email" name="orderID" type="email" placeholder="Email address (optional)" maxlength=50 autocapitalize=off autocorrect=off><br>
+        </li>
+
+
+
+
+
+
+
+
+
+        <li class="bitpay-donate-field">
+          <label>Amount:</label>
+          <input class="bitpay-donate-field-price" name="price" type="number" value="10.00" placeholder="Amount" maxlength="10" min="0.000006" step="0.000001"/>
+          <select class="bitpay-donate-field-currency" name="currency" value="">
+            <option selected="selected" value="USD">USD</option>
+            <option value="BTC">BTC</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="LTL">LTL</option>
+            <option value="LVL">LVL</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+        </li>
+
+
+      </ul>
+      <input type="hidden" name="data" value="ddFrz5v8dCQ/2oQV9a+OLm3nVrlinxOo1WYFsRjZR5IoouplTgMj7zg8OB3i5xSYypt0yEdK9jrcPNaxeJbjRTkQAavNtTEZna5+ZGed/dc40B6iJ7G6sK8ahb67ljFF3nFTGtxUpqu5tOT5ueFVn0TTeG8hnW+qdddjioRK6H1PISVCPX2SN+AU0lvH6F4Jj3LEUeRfwXAz7kGJVm3bKlX79ePu9AYMxVjuK5gmu9Y=">
+      <div class="bitpay-donate-button-wrapper">
+        <input class="bitpay-donate-button" name="submit" src="https://bitpay.com/img/donate-button.svg" onerror="this.onerror=null; this.src='https://bitpay.com/img/donate-button-md.png'" width="126" height="48" type="image" alt="BitPay, the easy way to pay with bitcoins." border="0">
+      </div>
+    </fieldset>
+  </form>
+  <script type="text/javascript">
+  function checkRequiredFields(form){
+    function isFilled(field){
+      if (field.value.length < 1){
+        return false;
+      }
+      return true;
+    }
+    var elements = form.elements;
+    var invalid = false;
+    for(var i=0; i<elements.length; i++) {
+      elements[i].className = elements[i].className.replace('bitpay-donate-error', '');
+      if(elements[i].className.indexOf("required") != -1) {
+        if(!isFilled(elements[i])){
+          elements[i].className = elements[i].className + ' bitpay-donate-error';
+          invalid = true;
+        };
+      };
+    }
+    if ( invalid ) {
+       return false;
+    }
+    var donationElement = document.getElementById('donation-value');
+    if(donationElement){
+      var enteredDonation = Number(donationElement.value);
+      var maximumDonation = Number(document.getElementById('reference-maximum').value);
+      if(enteredDonation > maximumDonation){
+        alert("Your donation was larger than the allowed maximum of " + Number(maximumDonation).toFixed(2))
+        return false;
+      };
+    };
+    return true;
+  };
+  </script>
+
 		</div>
 	</span>
 	<span>
