@@ -56,6 +56,16 @@
     crossorigin="anonymous"></script>
 
     <script type="javascript" src="/static/js/analytics.js"></script>
+    <script type="javascript">
+    // src="/static/js/widgets.js">
+
+    $(function() {
+      $('.accordion-header').on('click', ':not(a)', function(e) {
+        $(e.delegateTarget).siblings('.accordion-body').get(0).slideToggle();
+      });
+    });
+
+    </script>
 
   </body>
 </html>
