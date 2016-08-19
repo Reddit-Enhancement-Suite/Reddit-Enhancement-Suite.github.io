@@ -42,15 +42,16 @@ title: Releases
 
 
 <style type="text/css">
-.accordion-rows .row .accordion-body {
+.accordion-rows .accordion-body {
 	height: 0;
 }
-.accordion-rows .row[data-tags~="release"] .accordion-body,
-.accordion-rows .row[data-tags~="pre-release"] .accordion-body {
+
+.accordion-rows .accordion-header[data-tags~="release"] ~ .accordion-body {
+	height: 0;
+}
+.accordion-rows .accordion-header[data-tags~="release"]:first-of-type + .accordion-body,
+.accordion-rows .accordion-header[data-tags~="pre-release"] + .accordion-body {
 	height: auto;
-}
-.accordion-rows .row[data-tags~="release"] ~ .row[data-tags~="pre-release"] .accordion-body {
-	height: 0;
 }
 
 .accordion-rows .accordion-header {
