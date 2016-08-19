@@ -61,7 +61,7 @@
 
     $(function() {
       $('.accordion-header').on('click', ':not(a)', function(e) {
-        $(e.delegateTarget).siblings('.accordion-body').first().slideToggle();
+        $(e.delegateTarget).next('.accordion-body').slideToggle();
       });
     });
 
