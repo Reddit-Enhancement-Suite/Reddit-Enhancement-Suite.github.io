@@ -203,6 +203,9 @@ body {
   padding-top: 12px;
   word-spacing: 25px;
 }
+.browsers a:hover { 
+  text-decoration: none;
+}
 
 #markdown-toc {
   float: right;
