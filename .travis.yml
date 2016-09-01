@@ -1,7 +1,4 @@
-before_script:
- - chmod 775 ./invalidate.sh
-
-script: 
+script:
   - ./invalidate.sh
 
 branches:
