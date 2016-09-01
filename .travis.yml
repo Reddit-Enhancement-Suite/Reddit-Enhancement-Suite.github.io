@@ -1,5 +1,5 @@
 script:
-  - "./invalidate.sh"
+  - "invalidate.sh"
 
 branches:
   only:
