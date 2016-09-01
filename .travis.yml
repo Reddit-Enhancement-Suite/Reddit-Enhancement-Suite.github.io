@@ -1,6 +1,6 @@
 script:
   - ls -l
-  - cd Reddit-Enhancement-Suite/Reddit-Enhancement-Suite.github.io && ./invalidate.sh
+  - ./invalidate.sh
 
 branches:
   only:
