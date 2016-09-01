@@ -1,5 +1,5 @@
 script:
-  - cd /reddit-enhancement-suite/reddit-enhancement-suite.github.io && ./invalidate.sh
+  - cd reddit-enhancement-suite/reddit-enhancement-suite.github.io && ./invalidate.sh
 
 branches:
   only:
