@@ -1,5 +1,5 @@
 before_script:
- - chmod +x ./invalidate
+ - chmod +x ./invalidate.sh
 
 script: invalidate
 
