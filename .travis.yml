@@ -1,0 +1,6 @@
+script:
+  - ./invalidate.sh
+
+branches:
+  only:
+    - master
