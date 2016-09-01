@@ -1,6 +1,7 @@
-script:
-  - ls -l
-  - ./invalidate.sh
+before_script:
+ - chmod +x ./invalidate
+
+script: invalidate
 
 branches:
   only:
