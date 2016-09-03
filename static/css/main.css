@@ -217,6 +217,10 @@ body {
   border-bottom: 1px #333 dotted;
 }
 
+td {
+  padding-right: 15px;
+}
+
 /* Footer
 -------------------------------------------------- */
 
