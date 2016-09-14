@@ -204,7 +204,7 @@ body {
   padding-top: 12px;
   word-spacing: 25px;
 }
-.browsers a:hover { 
+.browsers a:hover {
   text-decoration: none;
 }
 
@@ -219,6 +219,18 @@ body {
 
 td {
   padding-right: 30px;
+}
+
+/* Buttons
+-------------------------------------------------- */
+.button {
+  display: inline-block;
+  margin: 0.5em;
+  border: 1px #0C506C solid;
+  border-radius: 1em;
+  padding: 2em 1em;
+  background: #04789a;
+  color: white;
 }
 
 /* Footer
