@@ -230,7 +230,9 @@ td {
   border-radius: 1em;
   padding: 2em 1em;
   background: #04789a;
-  color: white;
+}
+.button, .page a.button {
+   color: white;
 }
 
 /* Footer
