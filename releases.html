@@ -39,14 +39,15 @@ title: Releases
 				</h5>
 			</div>
 		</div>
+  		{% if found_stable_release == false %}
 		<div class="row accordion-body">
-			{% if found_stable_release == false %}
 			<div class="blogpost">
 				  {{ post.content }}
 				   <hr>
 			</div>
-			{% endif %}
+			
 		</div>
+	  	{% endif %}
 	  	{% for tag in post.tags %}
 	  		{% if tag == "Release" %}
 	  			{% assign found_stable_release = true %}
