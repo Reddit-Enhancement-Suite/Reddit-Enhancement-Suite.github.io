@@ -15,6 +15,7 @@ title: Releases
 <h1 id="releases">Releases</h1>
 <div class="panel panel-default accordion-rows">
   <div class="panel-body">
+	{% assign found_stable_release = false %}
 	{% for post in site.posts %}
 		<div class="row accordion-header"
 			data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
@@ -38,34 +39,19 @@ title: Releases
 				</h5>
 			</div>
 		</div>
+		{% if found_stable_release == false %}
 		<div class="row accordion-body">
 				<div class="blogpost">
 				  {{ post.content }}
 				   <hr>
-				</div>
+			</div>
+		{% endif %}
 		</div>
+	  	{% for tag in post.tags %}
+	  		{% if tag == "Release" %}
+	  			{% assign found_stable_release = true %}
+			{% endif %}
+	  	{% endfor %}
 	  {% endfor %}
   </div>
 </div>
-
-<style type="text/css">
-.accordion-rows .accordion-body {
-	height: 0;
-	overflow: hidden;
-}
-
-.accordion-rows .accordion-header[data-tags~="release"]:first-of-type + .accordion-body,
-.accordion-rows .accordion-header[data-tags~="pre-release"] + .accordion-body {
-	height: auto;
-}
-.accordion-rows .accordion-header[data-tags~="release"] ~ .accordion-body {
-	height: 0;
-}
-
-/* Unfolding is broken 
-.accordion-rows .accordion-header {
-	cursor: pointer;
-}
-*/
-</style>
-
