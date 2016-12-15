@@ -3,6 +3,18 @@ layout: page
 title: Releases
 ---
 
+
+<div id="fix-storage" style="display: none;">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<i class="fa fa-exclamation-triangle" aria-hidden="true" style="float: left; display: block; font-size: 100px; color: orange; margin-right: 0.1em;"></i>
+			<h2>Do you see this page every time you visit Reddit?</h2>
+			<a href="https://en.reddit.com/r/Enhancement/wiki/faq/announcements_tab_opening" class="button" style="float: right">Fix RES</a>
+			<p>Your RES storage might be broken if this page keeps popping up. <a href="https://www.reddit.com/r/Enhancement/wiki/faq/announcements_tab_opening">Fix RES now.</a></p>
+		</div>
+	</div>
+</div>
+
 <h1 id="contribute">Contribute to RES</h1>
 <div class="panel panel-default">
     <div class="panel-body">
@@ -11,6 +23,7 @@ title: Releases
         <p>When you contribute, you make it possible for the team to cover hosting costs and other expenses so that we can focus on doing what we do best: making your Reddit experience even better.</p>
     </div>
 </div>
+
 
 <h1 id="releases">Releases</h1>
 <div class="panel panel-default accordion-rows">
@@ -55,3 +68,41 @@ title: Releases
 	  {% endfor %}
   </div>
 </div>
+
+<script type="text/javascript">
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+</script>
+
+<script type="text/javascript">
+(function() {
+	var RECENT_COOKIE = 'recent_visitor';
+	var INFO_PANEL = '#fix-storage';
+	if (readCookie(RECENT_COOKIE)) {
+		document.querySelector(INFO_PANEL).style.display = 'block';
+	}
+	createCookie(RECENT_COOKIE, 1, 0.5);
+})();
+</script>
