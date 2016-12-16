@@ -229,6 +229,8 @@ td {
   border: 1px #0C506C solid;
   border-radius: 1em;
   padding: 2em 1em;
+  min-width: 8em;
+  text-align: center;
   background: #04789a;
 }
 .button, .page a.button {
