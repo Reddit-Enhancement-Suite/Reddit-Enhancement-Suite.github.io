@@ -206,6 +206,7 @@ body {
   vertical-align: top;
   display: inline-block;
   text-align: center;
+  width: 60px;
 }
 .browsers a:hover {
   text-decoration: none;
