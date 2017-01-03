@@ -183,6 +183,7 @@ body {
   padding-top: 5%;
 }
 .blog-post{
+
   padding-top: 15px;
 }
 .blog-title{
@@ -203,11 +204,23 @@ body {
 .browsers {
   padding-top: 12px;
   word-spacing: 25px;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
 }
 .browsers a:hover {
   text-decoration: none;
 }
 
+img {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+.caption {
+    display: block;
+}
 #markdown-toc {
   float: right;
   margin-left: 20px;
