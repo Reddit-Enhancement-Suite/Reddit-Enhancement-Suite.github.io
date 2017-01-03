@@ -164,7 +164,7 @@ body {
   border-style: none;
 }
 .panel-body {
-  padding-top: -10px;
+ padding-top: -10px;
   text-align: left;
 }
 .small-ctas {
@@ -206,7 +206,7 @@ body {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  width: 60px;
+  width: 90px;
 }
 .browsers a:hover {
   text-decoration: none;
