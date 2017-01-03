@@ -211,12 +211,6 @@ body {
 .browsers a:hover {
   text-decoration: none;
 }
-
-img {
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-}
 .caption {
     display: block;
 }
