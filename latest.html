@@ -26,7 +26,7 @@ title: Latest Release
 <div class="panel panel-default accordion-rows">
    <div class="panel-body">
       {% assign found_stable_release = false %}
-      {% assign posts = site.posts | where post.tags contains "Release" %}
+      {% assign posts = site.tags.Release %}
       {% for post in posts limit:1 %}
       <div class="row accordion-header"
          data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
