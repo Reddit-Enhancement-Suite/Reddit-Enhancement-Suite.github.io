@@ -31,7 +31,7 @@ title: Latest Release
 <div class="panel panel-default accordion-rows">
   <div class="panel-body">
 	{% assign found_stable_release = false %}
-	{% for post in site.posts limit:1 %}
+	{% for post in site.posts limit:1 %}{% if post.tags contains "Release" and post.tags contains "Pre-release"%}
 		<div class="row accordion-header"
 			data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
 			<div class="col-sm-5 col-md-5 col-lg-5">
