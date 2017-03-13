@@ -5,6 +5,8 @@ tags:
 - Known Issues
 ---
 
+#For known issues with RES releases, please see the relevant [changelog](https://redditenhancementsuite.com/releases/).
+
 #Extension conflicts
 
 Some common extensions interfere with RES.  To troubleshoot potential conflicts, try turning off all your other extensions.
@@ -95,8 +97,6 @@ Try HoverFree or Imagus instead.
 
 HTTPS everywhere can break some of RES's image viewing features unless disabled for affected sites (e.g. imgur)
 
-##Privacy Badger
-
 ### Privacy Badger vs RES
 
 A user reported that it prevents RES v4.5.1 from loading: https://www.reddit.com/r/RESissues/comments/2givgp/res_not_working_at_all_with_newest_update/ckjn087
@@ -108,5 +108,4 @@ A user reported that Privacy Badger blocks gfycat by default: https://www.reddit
 ###Avast Online Security
 
 We have had some reports of Avast Online Security breaking some RES features such as NER and Modmail Popup. Disabling the "Search engine results" module resolves this.
-
 https://www.reddit.com/r/RESissues/comments/5yo3be/bug/dew3dpc/
