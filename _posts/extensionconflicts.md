@@ -26,15 +26,11 @@ If Twitter embeds are showing plain text, Ghostery may be blocking Twitter's for
 
 https://www.reddit.com/r/RESissues/comments/43khwi/twitter_expandos_not_working_with_the/
 
----
-
 ###EmojiInput by EmojiStuff.com
 
 Emoji Input reportedly blocks Account Switcher dropdown showing when clicking the snoo/arrow button and image expandos.
 
 https://www.reddit.com/r/RESissues/comments/4is8fm/bug_account_switcher_and_the_pictures_in_comments/d320tcl?context=5
-
----
 
 ###Dashlane
 
@@ -60,11 +56,9 @@ Typically caused by other extensions interfering with res. If you encounter this
 
 Several common extensions which cause this issue area listed below. 
 
-###4chan Plus - click and dragging an image open a new tab
-
-###YouTubeMagic Actions - click and dragging an image open a new tab
-
-###AS Magic Viewer - click and dragging an image open a new tab
+* 4chan Plus
+* YouTubeMagic Actions
+* AS Magic Viewer
 
 Resizing an RES expando image by clicking and dragging it may open the image link in a new tab. Several users have reported that AS Magic Viewer causes this, and uninstalling that fixes it.
 
@@ -74,10 +68,6 @@ Resizing an RES expando image by clicking and dragging it may open the image lin
 ###[Reddit Comment Highlights](https://github.com/staticfish/Reddit-Comment-Highlights)
 
 When using this extension, turn off RES's **[New Comment Count](https://www.reddit.com/#!settings/newCommentCount)**
-
--- [](#gear)
-
-[RES settings console](https://www.reddit.com/#!settings) > Comments > [New Comment Count](https://www.reddit.com/#!settings/newCommentCount "newCommentCount") red
 
 ###[Google Services Dashboard](https://chrome.google.com/webstore/detail/google-services-dashboard/eijbjfcckboebcapjecehbbbcdojcelo)
 
