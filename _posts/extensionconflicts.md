@@ -104,3 +104,9 @@ A user reported that it prevents RES v4.5.1 from loading: https://www.reddit.com
 ### Privacy Badger vs Gfycat
 
 A user reported that Privacy Badger blocks gfycat by default: https://www.reddit.com/r/RESissues/comments/43h09r/bug_gfycat_embedded_videos_not_playing/
+
+###Avast Online Security
+
+We have had some reports of Avast Online Security breaking some RES features such as NER and Modmail Popup. Disabling the "Search engine results" module resolves this.
+
+https://www.reddit.com/r/RESissues/comments/5yo3be/bug/dew3dpc/
