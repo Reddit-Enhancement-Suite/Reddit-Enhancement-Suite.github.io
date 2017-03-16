@@ -3,4 +3,114 @@ layout: page
 title: Known Issues
 ---
 
-{% include knownissues.md %}
+<h1 id="forknownissueswithresreleasespleaseseetherelevantchangeloghttpsredditenhancementsuitecomreleases">For known issues with RES releases, please see the relevant <a href="https://redditenhancementsuite.com/releases/">changelog</a>.</h1>
+
+<h1 id="extensionconflicts">Extension conflicts</h1>
+
+<p>Some common extensions interfere with RES.  To troubleshoot potential conflicts, try turning off all your other extensions.</p>
+
+<ul>
+<li><p><strong>Chrome / Opera:</strong> go to chrome://extensions > for each extension, uncheck the  checkbox ☑ Enabled</p></li>
+
+<li><p><strong>Microsoft Edge:</strong> Settings > Extensions > for each extension, toggle the enabled option.</p></li>
+
+<li><p><strong>Firefox:</strong> Tools menu > Add-ons > Extensions tab > for each extension, Click "Disable" button</p></li>
+</ul>
+
+<p>Disable all your other extensions and plugins, but leave RES enabled. If the problem goes away, then it's a problem with one of your other extensions. (Sometimes other extensions interact with RES in strange ways.) To figure out which one exactly, turn each plugin back on one at a time and reload reddit.com until something breaks.</p>
+
+<hr />
+
+<h3 id="ghosteryvstwitterexpandos">Ghostery vs Twitter expandos</h3>
+
+<p>If Twitter embeds are showing plain text, Ghostery may be blocking Twitter's formatting script. To fix this, disable Ghostery's <a href="https://apps.ghostery.com/en/apps/twitter_button">Twitter Button Filter</a>.</p>
+
+<p>https://www.reddit.com/r/RESissues/comments/43khwi/twitter<em>expandos</em>not<em>working</em>with_the/</p>
+
+<h3 id="emojiinputbyemojistuffcom">EmojiInput by EmojiStuff.com</h3>
+
+<p>Emoji Input reportedly blocks Account Switcher dropdown showing when clicking the snoo/arrow button and image expandos.</p>
+
+<p>https://www.reddit.com/r/RESissues/comments/4is8fm/bug<em>account</em>switcher<em>and</em>the<em>pictures</em>in_comments/d320tcl?context=5</p>
+
+<h3 id="dashlane">Dashlane</h3>
+
+<p>Firefox stops responding with:</p>
+
+<blockquote>
+  <p>"Warning: Unresponsive script [...] Script: resource://gre/modules/commonj...scripts/kwift.FFJETPACK.min.js"</p>
+</blockquote>
+
+<p><a href="https://www.reddit.com/r/firefox/comments/3yzns6/temporary_hangs_on_scriptskwiftffjetpackminjs1/d0zhgv0">More info</a></p>
+
+<h3 id="mcafeesiteadvisor">McAfee Site Advisor</h3>
+
+<p>When visiting any reddit page, McAfee Site Advisor throws an error :</p>
+
+<blockquote>
+  <p>Exception... "<no message>" nsresult: "0x805e0006 (<unknown>)" location: "JS frame :: chrome://saff/content/saffplg.js :: oSAPlg.navigate :: line 30" data: no]</p>
+</blockquote>
+
+<p><a href="http://www.reddit.com/r/resissues/comments/3re92n/_/">More discussion</a></p>
+
+<p>This is unrelated to RES. </p>
+
+<h4 id="clickanddragginganimageopenanewtab">Click and dragging an image open a new tab</h4>
+
+<p>Typically caused by other extensions interfering with res. If you encounter this, try turning off other extensions and reloading the page to track down the culprit. </p>
+
+<p>Several common extensions which cause this issue area listed below. </p>
+
+<ul>
+<li>4chan Plus</li>
+
+<li>YouTubeMagic Actions</li>
+
+<li>AS Magic Viewer</li>
+</ul>
+
+<p>Resizing an RES expando image by clicking and dragging it may open the image link in a new tab. Several users have reported that AS Magic Viewer causes this, and uninstalling that fixes it.</p>
+
+<p><a href="https://www.reddit.com/r/RESissues/comments/3pje2u/bug_zoom_with_expandables_opens_the_link/">More details</a></p>
+
+<h3 id="redditcommenthighlightshttpsgithubcomstaticfishredditcommenthighlights"><a href="https://github.com/staticfish/Reddit-Comment-Highlights">Reddit Comment Highlights</a></h3>
+
+<p>When using this extension, turn off RES's <strong><a href="https://www.reddit.com/#!settings/newCommentCount">New Comment Count</a></strong></p>
+
+<h3 id="googleservicesdashboardhttpschromegooglecomwebstoredetailgoogleservicesdashboardeijbjfcckboebcapjecehbbbcdojcelo"><a href="https://chrome.google.com/webstore/detail/google-services-dashboard/eijbjfcckboebcapjecehbbbcdojcelo">Google Services Dashboard</a></h3>
+
+<p>After resizing an image by clicking and dragging, the image opens in a new tab. <a href="https://www.reddit.com/r/RESissues/comments/2v48mo/images_open_in_new_tab_after_dragging_to_expand/cofw8o5">More details</a></p>
+
+<h3 id="adblockforyoutube">AdBlock for YouTube</h3>
+
+<p>AdBlock for YouTube apparently breaks RES's inline image viewer <a href="http://www.reddit.com/r/RESissues/comments/2c4myb/bug_adblock_for_youtube_addon_breaks_images/">according to this post</a></p>
+
+<h3 id="chromoji">Chromoji</h3>
+
+<p><a href="https://www.reddit.com/r/RESissues/comments/1wv3ny/sticky_chromoji_is_breaking_redditres_on_windows/">Chromoji often breaks RES, as well</a></p>
+
+<h3 id="ghosterynoscript">Ghostery, NoScript</h3>
+
+<p>Ghostery, Adblock Plus, and other adblock/Javascript blocker scripts often interfere with RES. Add an exception for ("whitelist") reddit.com to fix this. (Sometimes Adblock Plus automatically updates their lists, so don't rule out ABP even if you haven't changed anything recently.)</p>
+
+<h3 id="hoverzoom">HoverZoom</h3>
+
+<p>HoverZoom is usually okay, but it can make RES's image expandos jiggle around a little.
+Try HoverFree or Imagus instead.</p>
+
+<h3 id="httpseverywhere">HTTPS Everywhere</h3>
+
+<p>HTTPS everywhere can break some of RES's image viewing features unless disabled for affected sites (e.g. imgur)</p>
+
+<h3 id="privacybadgervsres">Privacy Badger vs RES</h3>
+
+<p>A user reported that it prevents RES v4.5.1 from loading: https://www.reddit.com/r/RESissues/comments/2givgp/res<em>not</em>working<em>at</em>all<em>with</em>newest_update/ckjn087</p>
+
+<h3 id="privacybadgervsgfycat">Privacy Badger vs Gfycat</h3>
+
+<p>A user reported that Privacy Badger blocks gfycat by default: https://www.reddit.com/r/RESissues/comments/43h09r/bug<em>gfycat</em>embedded<em>videos</em>not_playing/</p>
+
+<h3 id="avastonlinesecurity">Avast Online Security</h3>
+
+<p>We have had some reports of Avast Online Security breaking some RES features such as NER and Modmail Popup. Disabling the "Search engine results" module resolves this.
+https://www.reddit.com/r/RESissues/comments/5yo3be/bug/dew3dpc/</p>
