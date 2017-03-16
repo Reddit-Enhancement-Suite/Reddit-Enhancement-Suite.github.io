@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: knownissues
 title: Known Issues
 ---
 
