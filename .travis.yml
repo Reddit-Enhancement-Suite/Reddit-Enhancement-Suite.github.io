@@ -1,6 +1,6 @@
+language: generic
 script:
   - ./invalidate.sh
-
 branches:
   only:
     - master
