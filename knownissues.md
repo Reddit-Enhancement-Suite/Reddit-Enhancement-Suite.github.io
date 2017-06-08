@@ -110,3 +110,9 @@ Privacy Badger may block Gfycat or other hosts by default.
 A recent update of Avast Online Security may break some RES features including NER and the Quick Message Popup. Disabling the "Search engine results" module resolves this.
 
 [more info](https://www.reddit.com/r/RESissues/comments/5yo3be/bug/dew3dpc/)
+
+### Safebrowse
+
+Safebrowse may cause the page to refresh on "show images" or manually expanding images.
+
+[more info](https://www.reddit.com/r/RESissues/comments/6g26it/bug/dimz24k/)
