@@ -1,4 +1,4 @@
-language: generic
+language: shell
 script:
   - ./invalidate.sh
 branches:
