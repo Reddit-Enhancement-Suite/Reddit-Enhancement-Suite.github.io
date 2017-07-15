@@ -14,15 +14,12 @@
       <title>{{ site.title }}</title>
     {% endif %}
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
     crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/syntax.css">
-
-    {% include analytics.html %}
   </head>
   <body>
     <div id="wrap">
@@ -32,22 +29,6 @@
     </div>
 
     {% include footer.html %}
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
-    integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
-    crossorigin="anonymous"></script>
-
-    <script src="/static/js/analytics.js"></script>
-    <script>
-    // src="/static/js/widgets.js">
-
-    $(function() {
-      $('.accordion-header').on('click', ':not(a)', function(e) {
-        $(e.delegateTarget).next('.accordion-body').slideToggle();
-      });
-    });
-    </script>
-
+    {% include analytics.html %}
   </body>
 </html>
