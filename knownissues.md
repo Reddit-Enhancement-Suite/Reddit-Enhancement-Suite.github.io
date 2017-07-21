@@ -47,7 +47,7 @@ When visiting any reddit page, McAfee Site Advisor throws an error :
 
 This is unrelated to RES.
 
-[more info](http://www.reddit.com/r/resissues/comments/3re92n/_/)
+[more info](https://www.reddit.com/r/resissues/comments/3re92n/_/)
 
 #### Click and dragging an image open a new tab
 
@@ -77,7 +77,7 @@ After resizing an image by clicking and dragging, the image opens in a new tab.
 
 AdBlock for YouTube may break RES's inline image viewer.
 
-[more info](http://www.reddit.com/r/RESissues/comments/2c4myb/bug_adblock_for_youtube_addon_breaks_images/)
+[more info](https://www.reddit.com/r/RESissues/comments/2c4myb/bug_adblock_for_youtube_addon_breaks_images/)
 
 ### Chromoji
 
