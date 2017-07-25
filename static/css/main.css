@@ -272,3 +272,6 @@ td {
 .text-muted {
     color: #6b6b6b;
 }
+/* Active Browser Css */
+
+.activeBrowser { border-style: solid; border-color: red; }
