@@ -1,25 +1,19 @@
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 var isEdge = !!window.StyleMedia;
 var isFirefox = typeof InstallTrigger !== 'undefined';
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') != -1;
+var isSafari = navigator.userAgent.indexOf("Safari") > -1;
 
-switch (true) {
-  case isChrome == true:
-    $('img[src="/static/img/chrome.png"]').toggleClass('activeBrowser')
-    break;
-  case isEdge == true:
-    $('img[src="/static/img/edge.png"]').toggleClass('activeBrowser')
-    break;
-  case isFirefox == true:
-    $('img[src="/static/img/firefox.png"]').toggleClass('activeBrowser')
-    break;
-  case isOpera == true:
-    $('img[src="/static/img/opera.png"]').toggleClass('activeBrowser')
-    break;
-  case isSafari == true:
-    $('img[src="/static/img/safari.png"]').toggleClass('activeBrowser')
-    break;
-  default:
-    break;
+if (isChrome) {
+  document.getElementById("chromebrowser").classList.add('activeBrowser');
+} else if (isEdge) {
+  document.getElementById("edgebrowser").classList.add('activeBrowser');
+} else if (isFirefox) {
+  document.getElementById("firefoxbrowser").classList.add('activeBrowser');
+} else if (isOpera) {
+  document.getElementById("operabrowser").classList.add('activeBrowser');
+} else if (isSafari) {
+  document.getElementById("safaribrowser").classList.add('activeBrowser');
+} else {
+  document.getElementById("browsers").classList.add('noactivebrowser');
 }
