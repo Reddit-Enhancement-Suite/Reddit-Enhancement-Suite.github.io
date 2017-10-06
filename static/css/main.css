@@ -254,9 +254,9 @@ h5 a:hover {
 .site-github:hover {
     text-decoration: none;
 }
-.activeBrowser, 
-.noActiveBrowser { 
-    opacity: 1; 
+.activeBrowser,
+.browsers.noActiveBrowser > .browser { 
+    opacity: 1;
 }
 a.caption {
     display: block;

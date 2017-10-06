@@ -5,15 +5,15 @@ var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.user
 var isSafari = navigator.userAgent.indexOf("Safari") > -1;
 
 if (isChrome) {
-  document.getElementById("chromebrowser").classList.add('activeBrowser');
+  document.querySelector(".chromebrowser").classList.add('activeBrowser');
 } else if (isEdge) {
-  document.getElementById("edgebrowser").classList.add('activeBrowser');
+  document.querySelector(".edgebrowser").classList.add('activeBrowser');
 } else if (isFirefox) {
-  document.getElementById("firefoxbrowser").classList.add('activeBrowser');
+  document.querySelector(".firefoxbrowser").classList.add('activeBrowser');
 } else if (isOpera) {
-  document.getElementById("operabrowser").classList.add('activeBrowser');
+  document.querySelector(".operabrowser").classList.add('activeBrowser');
 } else if (isSafari) {
-  document.getElementById("safaribrowser").classList.add('activeBrowser');
+  document.querySelector(".safaribrowser").classList.add('activeBrowser');
 } else {
-  document.getElementById("browsers").classList.add('noactivebrowser');
+  document.querySelector(".browsers").classList.add('noActiveBrowser');
 }
