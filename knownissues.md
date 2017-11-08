@@ -3,6 +3,8 @@ layout: knownissues
 title: Known Issues
 ---
 
+# There are currently known issues with RES on Chrome Dev/Canary builds. [Please see here.](https://www.reddit.com/r/RESissues/comments/7bp5hn/running_chrome_devcanary_builds_and_having_issues/)
+
 # For known issues with RES releases, please see the relevant [changelog](https://redditenhancementsuite.com/releases/).
 
 # Extension conflicts
