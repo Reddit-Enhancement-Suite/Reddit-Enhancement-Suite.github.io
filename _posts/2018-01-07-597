@@ -1,0 +1,11 @@
+---
+layout: releases
+title:  v5.9.7
+permalink: releases/beta/5.9.7/
+tags:
+- Pre-release
+---
+
+### Bug Fixes
+
+- (beta) Restore keyboard nav performance (thanks @larsjohnsen)
