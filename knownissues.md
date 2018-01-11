@@ -95,10 +95,6 @@ HoverZoom is usually okay, but it can make RES's image expandos jiggle around a 
 
 Try HoverFree or Imagus instead.
 
-### HTTPS Everywhere
-
-HTTPS everywhere can break some of RES's image viewing features unless disabled for affected sites (e.g. imgur).
-
 ### Privacy Badger
 
 Privacy Badger may block Gfycat or other hosts by default.
