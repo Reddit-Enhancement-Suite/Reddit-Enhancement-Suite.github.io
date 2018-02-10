@@ -5,3 +5,9 @@ description: Reddit Enhancement Suite (RES) is a community-driven unofficial bro
 short_description: community-driven unofficial browser extension for reddit
 google_analytics: UA-17650786-1
 permalink: pretty
+
+# Versions
+chrome_version: v5.10.3
+edge_version: v5.10.3
+firefox_version: v5.10.3
+opera_version: v5.10.3
