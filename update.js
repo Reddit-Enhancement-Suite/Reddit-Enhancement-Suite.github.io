@@ -51,6 +51,7 @@ seq(
 
 	},
 	function commitAndPush() {
+		execSync('git checkout master');
 		fs.writeFileSync('./_config.yml', config);
 		execSync('git add _config.yml');
 		execSync(`git commit --author="${process.env.BOT_USER} <${process.env.BOT_USER}@users.noreply.github.com>" -m "update versions"`);
