@@ -53,7 +53,11 @@ seq(
 	function commitAndPush() {
 		execSync('git checkout master');
 		fs.writeFileSync('./_config.yml', config);
-		execSync('git add _config.yml');
+		const added = execSync('git add -v _config.yml', { encoding: 'utf8' }).trim();
+		if (!added) {
+			console.log('No new versions found.');
+			return;
+		}
 		execSync(`git commit --author="${process.env.BOT_USER} <${process.env.BOT_USER}@users.noreply.github.com>" -m "update versions"`);
 		execSync(`git push https://${process.env.BOT_USER}:${process.env.BOT_PASSWORD}@github.com/Reddit-Enhancement-Suite/Reddit-Enhancement-Suite.github.io.git`);
 	}
