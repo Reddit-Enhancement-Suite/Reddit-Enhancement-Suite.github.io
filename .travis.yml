@@ -1,6 +1,16 @@
 language: shell
-script:
-  - ./invalidate.sh
 branches:
   only:
     - master
+env:
+  global:
+    - BOT_USER=Reddit-Enhancement-Suite-Bot
+    # BOT_PASSWORD
+    - secure: Fpk0Cl/ts6CVvTlRccjFviB8qNHbSRf8hg+XkZ2+3oaQy+Q5YjSs+8upIGXbSCuhRp3JiDnhetbiIPnzmyZ84bscPMycUvnIkW+21UjTSKCs0Bc4IBxkhHVZVTBEHBU8ylErIhiAqz6u7KdXqYvnuwpSEFkxa0d9eolJt/SOr4m6NZ6eq2bwkwN1KTLm5KP4tJdFTX09Yq/WHcJvpnPUHpzDGo0dEa25+Tteo91kiaBSUSLXHOSAn4OunJp0AIyXoo4dw4R35BBmWIIRYKRQXoMlMbT7D05SaFcJbPNKuuL3QcUElD8o+VazSQPlS4Sc0+jYLkDrd8+XG//CkqYw6vtX+/p6INQlgVQ5bAt7poB6o9qT6TK0u6uEc6ksaBD1CDrZzBOZK7i9MYoHXkPjleZ1+V/I8WzBRInJmFgRFDao55mWhMIM8S3uRReRhkJljoBkeV4Rm7UcVc/L067mssGILcDJS7kFwZz/kT3iSIxfhm13ck8SBp2q5NjrQ5MSogfDkzaGyAXoHFRwnmOTeI+Z/3C8RtKdfaAJUnxr47XdfCmow99+Kp3Hkoa9flvLjWlpXZOihDnaQpHgVYrrgcLJqTnBCSNmjLv/7zdP+o1CwaXGcmZZwRN5qaRg6757p5PUD9+U1BDVaQHr8P/Zn0HtOjlKOmQJfF0Mz529OIQ=
+script:
+  - if [[ "$TRAVIS_EVENT_TYPE" == "cron" ]] then
+      nvm use 8
+      node update.js
+    else
+      ./invalidate.sh
+    fi
