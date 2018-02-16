@@ -15,3 +15,9 @@ script:
       else
         ./invalidate.sh
       fi
+notifications:
+  irc:
+    channels:
+      - "irc.snoonet.org#enhancement"
+    on_success: change
+    on_failure: always
