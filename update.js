@@ -43,7 +43,7 @@ seq(
 			let data = '';
 			res.on('data', d => { data += d.toString('utf8'); });
 			res.on('end', () => {
-				const [, version] = (/<dd>(\d+\.\d+\.\d+)</dd>/).exec(data);
+				const [, version] = (/<dd>(\d+\.\d+\.\d+)<\/dd>/).exec(data);
 				config = config.replace(/opera_version:.+/, `opera_version: v${version}`);
 				done();
 			});
