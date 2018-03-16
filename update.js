@@ -18,6 +18,7 @@ seq(
 		}));
 	},
 	function updateEdge(done) {
+		return done(); // this response no longer includes the version number
 		https.get(Object.assign(
 			url.parse('https://www.microsoft.com/en-ca/store/p/reddit-enhancement-suite/9nblggh4nc12'),
 			{ headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36' } }
