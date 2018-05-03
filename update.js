@@ -1,7 +1,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const https = require('https');
-const url = require('url');
+const querystring = require('querystring');
 
 function seq(fn, ...fns) {
 	fn(fns.length > 0 ? () => seq(...fns) : () => {});
@@ -18,19 +18,62 @@ seq(
 		}));
 	},
 	function updateEdge(done) {
-		return done(); // this response no longer includes the version number
-		https.get(Object.assign(
-			url.parse('https://www.microsoft.com/en-ca/store/p/reddit-enhancement-suite/9nblggh4nc12'),
-			{ headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36' } }
-		), res => {
+		const appId = '9NBLGGH4NC12';
+		const tenantId = process.env.EDGE_TENANT_ID;
+		const clientId = process.env.EDGE_CLIENT_ID;
+		const clientSecret = process.env.EDGE_CLIENT_SECRET;
+
+		const content = querystring.stringify({
+			grant_type: 'client_credentials',
+			resource: 'https://manage.devcenter.microsoft.com',
+			client_id: clientId,
+			client_secret: clientSecret,
+		});
+
+		// https://docs.microsoft.com/en-us/windows/uwp/monetize/create-and-manage-submissions-using-windows-store-services#obtain-an-azure-ad-access-token
+		const req = https.request({
+			method: 'POST',
+			hostname: 'login.microsoftonline.com',
+			path: `/${tenantId}/oauth2/token`,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				'Content-Length': content.length,
+			},
+		}, res => {
 			let data = '';
 			res.on('data', d => { data += d.toString('utf8'); });
 			res.on('end', () => {
-				const [, version] = (/Version number: (\d+\.\d+\.\d+)/).exec(data);
-				config = config.replace(/edge_version:.+/, `edge_version: v${version}`);
-				done();
+				const accessToken = JSON.parse(data).access_token;
+				// https://docs.microsoft.com/en-us/windows/uwp/monetize/get-app-data
+				https.get({
+					hostname: 'manage.devcenter.microsoft.com',
+					path: `/v1.0/my/applications/${appId}`,
+					headers: { Authorization: `Bearer ${accessToken}` },
+				}, res => {
+					let data = '';
+					res.on('data', d => { data += d.toString('utf8'); });
+					res.on('end', () => {
+						const submissionId = JSON.parse(data).lastPublishedApplicationSubmission.id;
+						// https://docs.microsoft.com/en-us/windows/uwp/monetize/get-status-for-an-app-submission
+						https.get({
+							hostname: 'manage.devcenter.microsoft.com',
+							path: `/v1.0/my/applications/${appId}/submissions/${submissionId}`,
+							headers: { Authorization: `Bearer ${accessToken}` }
+						}, res => {
+							let data = '';
+							res.on('data', d => { data += d.toString('utf8'); });
+							res.on('end', () => {
+								const version = JSON.parse(data).applicationPackages[0].version.slice(0, -'.0'.length);
+								config = config.replace(/edge_version:.+/, `edge_version: v${version}`);
+								done();
+							});
+						});
+					});
+				});
 			});
 		});
+		req.write(content);
+		req.end();
 	},
 	function updateFirefox(done) {
 		https.get('https://img.shields.io/amo/v/reddit-enhancement-suite.json', res => res.on('data', d => {
