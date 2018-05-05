@@ -78,4 +78,7 @@ function request(options, doWrite = () => {}) {
 	}
 	execSync(`git commit --author="${process.env.BOT_USER} <${process.env.BOT_USER}@users.noreply.github.com>" -m "update versions"`);
 	execSync(`git push https://${process.env.BOT_USER}:${process.env.BOT_PASSWORD}@github.com/Reddit-Enhancement-Suite/Reddit-Enhancement-Suite.github.io.git`);
-})();
+})().catch(e => {
+	console.error(e);
+	process.exitCode = 1;
+});
