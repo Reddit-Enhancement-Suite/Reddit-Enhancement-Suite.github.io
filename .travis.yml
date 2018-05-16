@@ -18,8 +18,6 @@ script:
       if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then
         nvm use 8
         node update.js
-      else
-        ./invalidate.sh
       fi
 notifications:
   irc:
