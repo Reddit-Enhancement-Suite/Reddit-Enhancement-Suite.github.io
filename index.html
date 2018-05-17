@@ -12,36 +12,38 @@ layout: home
         <h4>{{ site.short_description}} </h4>
 
         <div class="browsers">
+        <div class="browser-chrome">
             <a href="https://chrome.google.com/webstore/detail/kbmfpngjjgdllneeigpgjifpgocmfgmb" data-browser="chrome">
-                <img title="Install in Chrome" src="/static/img/chrome.png">
+                <img class="chrome" id="chromebrowser" title="Install in Chrome" src="https://redditenhancementsuite.com/static/img/chrome.png">
             </a>
             <span class="caption">{{ site.chrome_version }}</span>
         </div>
-        <div class="browsers">
+        <div class="browser-edge">
             <a href="https://www.microsoft.com/store/apps/9nblggh4nc12" data-browser="edge">
-                <img title="Install in Edge" src="/static/img/edge.png">
+                <img class="edge" id="edgebrowser" title="Install in Edge" src="https://redditenhancementsuite.com/static/img/edge.png">
             </a>
             <span class="caption">{{ site.edge_version }}</span>
         </div>
-        <div class="browsers">
+        <div class="browser-firefox">
             <a href="https://addons.mozilla.org/en-US/firefox/addon/reddit-enhancement-suite/" data-browser="firefox">
-                <img title="Install in Firefox" src="/static/img/firefox.png">
+                <img class="firefox" id="firefoxbrowser" title="Install in Firefox" src="https://redditenhancementsuite.com/static/img/firefox.png">
             </a>
             <span class="caption">{{ site.firefox_version }}</span>
         </div>
-        <div class="browsers">
+        <div class="browser-opera">
             <a href="https://addons.opera.com/en-gb/extensions/details/reddit-enhancement-suite-2/" data-browser="opera">
-                <img title="Install in Opera" src="/static/img/opera.png">
+                <img class="opera" id="operabrowser" title="Install in Opera" src="https://redditenhancementsuite.com/static/img/opera.png">
             </a>
             <span class="caption">{{ site.opera_version }}</span>
         </div>
-         <div class="browsers">
+         <div class="browser-safari">
             <a href="/static/downloads/RES.safariextz" data-browser="safari">
-                <img title="Install in Safari - no longer developed" src="/static/img/safari.png" style="filter: saturate(0)">
+                <img class="safari" id="safaribrowser" title="Install in Safari - no longer developed" src="https://redditenhancementsuite.com/static/img/safari.png" style="filter: saturate(0)">
             </a>
             <span class="caption">v5.2.2 <a href="https://www.reddit.com/r/Enhancement/wiki/support#wiki_safari">EOL</a></span>
         </div>
-        <div class="browsers">
+        </div>
+        <div class="site-github">
             <a href="https://github.com/honestbleeps/Reddit-Enhancement-Suite" data-browser="github">
                 <img title="Contribute on GitHub" src="/static/img/github.png">
             </a>
@@ -61,3 +63,5 @@ layout: home
         </div>
     </div>
 </section>
+
+<script src="/static/js/browserDetect.js"></script>

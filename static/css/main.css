@@ -221,18 +221,44 @@ h5 a:hover {
     font-size: 18px;
     margin: 1em;
 }
-.browsers {
+.browser-chrome,
+.browser-edge,
+.browser-firefox,
+.browser-opera,
+.browser-safari {
     padding-top: 12px;
     word-spacing: 25px;
     vertical-align: top;
     display: inline-block;
     text-align: center;
     width: 90px;
+    opacity: 0.4;
 }
-.browsers a:hover {
+.browser-chrome:hover,
+.browser-edge:hover,
+.browser-firefox:hover,
+.browser-opera:hover,
+.browser-safari:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+.site-github {
+    padding-top: 12px;
+    word-spacing: 25px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+    opacity: 1;
+}
+.site-github:hover {
     text-decoration: none;
 }
-.caption {
+.activeBrowser,
+.browsers.noActiveBrowser > .browser { 
+    opacity: 1;
+}
+a.caption {
     display: block;
 }
 #markdown-toc {
