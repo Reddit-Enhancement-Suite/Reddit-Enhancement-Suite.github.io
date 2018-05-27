@@ -7,7 +7,7 @@ google_analytics: UA-17650786-1
 permalink: pretty
 
 # Versions
-chrome_version: v5.12.3
-edge_version: v5.12.3
-firefox_version: v5.12.3
+chrome_version: v5.12.4
+edge_version: v5.12.4
+firefox_version: v5.12.4
 opera_version: v5.12.3
