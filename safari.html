@@ -1,0 +1,58 @@
+---
+layout: page
+title: Safari Support
+---
+
+<a href="/static/downloads/RES.safariextz" class="button" style="float: right">Install Safari v5.2.2 <img title="Install in Safari" src="/static/img/safari.png"></a>
+
+<h1>Safari Support</h1>
+
+<p>As of RES v5.2.2, <strong>Safari is no longer a supported browser and will not receive updates or support from the development team</strong>. We want to support Safari and provide a good user experience for all, however we need Apple's support with this by improving extension development and publishing experiences.</p>
+
+<p><strong><a href="https://developer.apple.com/safari/whats-new/">Apple have announced that as of Safari 12, support for this style of extension will be deprecated and will no longer work.</a></strong></p>
+
+<br>
+
+<h4>Why did we do it?</h4>
+    
+<p>It ultimately came down to the direction development of Safari extensions was heading. Major browsers such as Google Chrome, Microsoft Edge and Mozilla Firefox were all adopting a standard commonly known as "WebExtensions". This provides a single API across all browsers. This is hugely beneficial as you can develop for all major browsers from a single code base. Safari is not adopting this standard and instead moving to their own format, with a strong reliance on Xcode. This would require significant investment from the development team to support the browser, as well as core developers having access to Xcode. Supporting this change would mean the codebase for RES would not be unified.</p>
+
+<p>Dropping Safari support was <strong>never solely about money</strong> as many think it is, <strong>we do not have a vendetta against Apple</strong>. The discussion lasted many weeks and it was not something we took lightly.</p>
+
+<br>
+
+<h4>"It was all about the money"</h4>
+<p>No it was not, whilst we are not a fan of the $100 charge due to our past experiences with Apple. We would be willing to pay it if Safari adopted the extensions standard.</p>
+
+<h4>"The RES team have a vendetta against Apple"</h4>
+<p>Again, no we do not. The finial decision was a group one and we stand by it. Many of the core developers use Apple devices on a daily basis for personal or work. During the development of RES any personal biases are set aside.</p>
+
+<h4>"Apple does it X way for good user experiences and battery efficiency"</h4>
+<p>Whilst it is true that Safari is generally better for battery life and UX on the macOS platform, this does not help us with having RES on the platform.</p>
+
+<h4>"Can we donate/you charge to support the platform?"</h4>
+<p>Whilst we appreciate the gesture, it was never about the money and more about the required development time required to support the platform.</p>
+
+<p>If it was possible to support Safari with donations, it would need to cover the following:</p>
+
+<ul>
+<p><li>Maintaining special handling for Safari in the main codebase (annoying for every contributor) or a separate fork (even more work, but at least it's siloed)</li></p>
+<p><li>... across _every_ feature of RES (there are a few)</li></p>
+<p><li>Writing extra native app code for the shell around the extension</li></p>
+<p><li>Owning and maintaining a Mac for development and testing</li></p>
+<p><li>Interfacing with Apple's sub-par processes</li></p>
+<p><li>Provide tech support for what would now be paying customers, since people raise their expectations when they give money even if it's donation-based</li></p>
+<p><li>Manage accounting, taxes</li></p>
+<p><li>Paying Reddit their cut per the license agreement</li></p>
+<p><li>Potentially pay other contributors to the codebase (several big contributors and many small)</li></p>
+<p><li>Potentially paperwork and fees to incorporate (set-up and maintenance costs)</li></p>
+<p><li>Potentially have to start paying for services that are currently free to FOSS projects</li></p>
+</ul>
+
+<br>
+
+<p>Please see <a href="https://medium.com/@honestbleeps/what-apple-gives-you-for-100-as-a-safari-extension-developer-and-why-reddit-enhancement-suite-6e2d829c2e52" title="What Apple gives you for $100 as a Safari Extension Developer — and why Reddit Enhancement Suite may cease support for Safari">here</a> for more information on this decision.</p>
+
+<br>
+
+<h3>We believe that RES should be free for all, we never want a upfront charge for access to an open source extension.</h3>

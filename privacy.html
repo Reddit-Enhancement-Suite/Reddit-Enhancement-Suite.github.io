@@ -5,24 +5,61 @@ title: Privacy Policy
 
 <h1>Privacy Policy</h1>
 
-<h2>Stored Data</h2>
+<h4>Stored Data</h4>
 <p>All RES data (settings, user tags, some browsing history) is stored in your computer's browser.  Data is not synced to a cloud service without you explicitly setting it up.</p>
 
-<h2>Passwords</h2>
+<h4>Passwords</h4>
 <p>RES does not encrypt passwords stored in the Account Switcher. <a href="https://www.reddit.com/r/Enhancement/wiki/faq/passwords#wiki_why_does_res_not_encrypt_passwords.3F" title="Why RES does not encrypt passwords stored in Account Switcher.">Would you like to know more, citizen?</a></p>
 
-<h2>Browsing history</h2>
+<h4>Browsing history</h4>
 <p>RES stores some data about where you've visited recently on reddit.com. This data is also stored while using RES incognito.</p>
 
-<h2>Browser permissions</h2>
+<h4>Browser permissions</h4>
 <p>RES requires access to certain functions of your browser and access to some external websites. <a href="https://www.reddit.com//r/enhancement/wiki/permissions" title="RES Browser Permissions">Would you like to know more, citizen?</a></p>
 
-<h2>Phoning home</h2>
+<h4>Phoning home</h4>
 <p>Reddit Enhancement Suite will check, at most once a day, to see if a new version is available. No data about you is sent to the RES team nor is it stored.</p>
 
-<h2>External assets</h2>
+<h4>External assets</h4>
 <p>You can use RES to load stylesheets from outside reddit.com. None are loaded by default.</p>
 <p>The websites hosting these external stylesheets can collect some data about you: your IP address, what browser you're using, and that you're loading the stylesheet from reddit.com. These websites can also add tracking cookies to your browser. These are generally safe, but if you are concerned about being tracked, do not add stylesheets from websites you don't trust.</p>
 
-<h2>Not a Privacy Extension</h2>
+<h4>Not a Privacy Extension</h4>
 <p>RES has some features to help maintain privacy, but by and large RES is not a privacy/security extension.</p>
+
+<br>
+
+<h1>Permissions</h1>
+
+<h4>Why does my browser tell me you need access to my history, various other permissions, etc?</h4>
+<p>Any extension ever made technically "has access to your browsing history", because it is running in your browser and needs to be able to see what URL you're on so it knows what to do. RES doesn't do anything with this history, and doesn't record it. Furthermore, it doesn't access your "past history" at all.</p>
+
+<h4>Tabs</h4>
+<p>RES needs "tabs" permission to open new tabs when you click links (e.g. keyboard commands that open a link in a new tab) -- this permission <strong>does NOT mean</strong> that RES can "see what's in your tabs"...</p>
+
+<h4>History</h4>
+<p>The image expandos that a lot of people love require RES to fetch the image (for some hosts) via their API eg imgur/DeviantArt. RES isn't "reading your history" -- it's adding URLs to your history to make those links purple.</p>
+
+<h4>Download files</h4>
+<ul>
+<p><li>RES's Backup and Restore includes a button to download all of your RES settings and data to a file.</li></p>
+<p><li>RES's image viewer includes a button to download the image to your computer.</li></p>
+</ul>
+
+<h4>Various websites</h4>
+<p>RES needs access to various websites (Chrome's message about "your data on..." is bogus) to do what it does. For example, hitting the imgur API to get data on an album so you can view it inline.</p>
+
+<p>Another example is the feature where RES adds Youtube video lengths to the ends of posts where possible. To do this it has to be able to contact YT to retrieve this info (hence the warning about needing to access data on other sites). It doesn't care how many times you've watched Bieber, it just needs to retrieve the length of the video.</p>
+
+<p>Be absolutely assured that RES does nothing malevolent with the permissions that you grant it. It has millions of users and works closely with reddit itself. (Not that it ever would), but even if a single line of malicious code were to enter RES, then it'd be detected in a flash by its huge userbase. If you're still unsure, RES is open source and you can inspect the code for yourself on github.</p>
+
+<p>As far as other sites it needs access to, RES pulls info from:</p>
+
+<ul>
+<p><li>redditenhancementsuite.com and reddit.honestbleeps.com (essentially the same URL)</li></p>
+<p><li>reddit.com (it's a reddit script)</li></p>
+<p><li>various media hosts, including but not limited to twitter.com, imgur.com min.us, flickr, photobucket, imgclean.com, youtube.com, deviantart.com and tumblr.com (so that you can see pictures, video times and tweets without leaving reddit)</li></p>
+</ul>
+
+<h4>Is RES harvesting and selling my data?</h4>
+No. Besides being unethical and easily detected, it's too much trouble to bother.</p>
