@@ -15,6 +15,7 @@ env:
     - secure: C/RbhXEdNMtT7EmrIKVsCHWLfDQZJ1IXOCEcyxKaTgF8uOJBuuWf8960HrUGfZum5u/Y3BWFbS/0HpfbBmmbu/3s+vyTuld4s1I2fh9SAH3UGbLtNnyA3S3xE1HL4b8AFb/EQ24LhREXUQggaNa4voU/PD1Ff20gFK/ye6Xhn7pxGQyveVLrH4bSA3ZgAx7zFXxonh1e3n0sYCTCaGyf4N0MC9PEga97zCnFXQccbJavF+wFWXK9whfSw7fb1vfnw+c2o9yEfQCv6y6JBuSzTjdWWiPNtLNyiaWQrZRuKYaen3eXTUWzW2h19nRKzR6QP5t0yfM4h+w8PBtNY+zL1gp0HWu+xiRllEeM26eWURetctzd/aTIPAOa8BjpRAyzYrcK1MeX/pHyf+1gQNRfH3ObCNa7ISbqipGvN9x/tNAUdiq9ai/rFk+LJX8TeRmK1DLLVJolyGYsOMI06hq7ahgJyGu7OvZBZ1SwVM05y1eSo17yS7qsVci89w3epbwz+V7wP5gXryyZd3G1rYHwyzHZfTKdBVhByoWu4AW2BTrVdGT+QO/jxqVeKy1Y64Usgx8r33RTerqsd7jTLLRe/48QyKPIpQ7dNKA0+Y5xLj3tc6oAf0OWW6R7/zkdR1aWJNr2Qa+h3wrPyiO0U41zzaDVUmcMykHUPoHWsG5YuUQ=
 script:
   - |
+      nvm install 8
       if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then
         nvm use 8
         node update.js
