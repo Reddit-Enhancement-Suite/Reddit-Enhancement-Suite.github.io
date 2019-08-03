@@ -190,7 +190,7 @@ h5 a:hover {
     text-align: left;
 }
 .small-ctas {
-    margin-top: 3em;
+    margin-top: 2em;
     text-align: center;
 }
 .small-ctas a {
@@ -222,11 +222,10 @@ h5 a:hover {
     margin: 1em;
 }
 .browsers {
-    padding-top: 12px;
     vertical-align: top;
     display: inline-block;
     text-align: center;
-    padding: 0px 20px 0px 20px;
+    padding: 20px 20px 0px 20px;
 }
 .browsers a:hover {
     text-decoration: none;
