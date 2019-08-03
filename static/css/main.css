@@ -226,6 +226,7 @@ h5 a:hover {
     vertical-align: top;
     display: inline-block;
     text-align: center;
+    width: 130px;
 }
 .browsers a:hover {
     text-decoration: none;
