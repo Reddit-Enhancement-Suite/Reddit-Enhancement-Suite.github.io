@@ -223,11 +223,9 @@ h5 a:hover {
 }
 .browsers {
     padding-top: 12px;
-    word-spacing: 25px;
     vertical-align: top;
     display: inline-block;
     text-align: center;
-    width: 90px;
 }
 .browsers a:hover {
     text-decoration: none;
