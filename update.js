@@ -32,9 +32,9 @@ function request(options, doWrite = () => {}) {
 	config = config.replace(/firefox_version:.+/, `firefox_version: ${firefoxVersion}`);
 
 	// ----- Opera -----
-	const operaPage = await request('https://addons.opera.com/en-gb/extensions/details/reddit-enhancement-suite-2/');
-	const [, operaVersion] = (/<dd>(\d+\.\d+\.\d+)<\/dd>/).exec(operaPage);
-	config = config.replace(/opera_version:.+/, `opera_version: v${operaVersion}`);
+	//const operaPage = await request('https://addons.opera.com/en-gb/extensions/details/reddit-enhancement-suite-2/');
+	//const [, operaVersion] = (/<dd>(\d+\.\d+\.\d+)<\/dd>/).exec(operaPage);
+	//config = config.replace(/opera_version:.+/, `opera_version: v${operaVersion}`);
 
 	// ----- Commit Changes -----
 	execSync('git checkout master');
