@@ -19,22 +19,13 @@ function request(options, doWrite = () => {}) {
 (async () => {
 	let config = fs.readFileSync('./_config.yml', 'utf8');
 
-	// ----- Chrome -----
+	// ----- Chromium Based -----
 	const { value: chromeVersion } = JSON.parse(await request('https://img.shields.io/chrome-web-store/v/kbmfpngjjgdllneeigpgjifpgocmfgmb.json'));
 	config = config.replace(/chrome_version:.+/, `chrome_version: ${chromeVersion}`);
-
-	// ----- Edge -----
-	// TODO: set this to the chrome version when Chromium Edge is mainstream
-	//config = config.replace(/edge_version:.+/, `edge_version: v${edgeVersion}`);
 
 	// ----- Firefox -----
 	const { value: firefoxVersion } = JSON.parse(await request('https://img.shields.io/amo/v/reddit-enhancement-suite.json'));
 	config = config.replace(/firefox_version:.+/, `firefox_version: ${firefoxVersion}`);
-
-	// ----- Opera -----
-	//const operaPage = await request('https://addons.opera.com/en-gb/extensions/details/reddit-enhancement-suite-2/');
-	//const [, operaVersion] = (/<dd>(\d+\.\d+\.\d+)<\/dd>/).exec(operaPage);
-	//config = config.replace(/opera_version:.+/, `opera_version: v${operaVersion}`);
 
 	// ----- Commit Changes -----
 	execSync('git checkout master');
